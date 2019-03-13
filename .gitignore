@@ -1,6 +1,7 @@
 */bin/
 */build/
 /.vscode/
+/Oppgave_3/
 
 # Compiled class file
 *.class

@@ -73,6 +73,7 @@ public class DobbelKjedetOrdnetListeM<T extends Comparable<T>> implements Dobbel
 			DobbelNode<T> nyNode = new DobbelNode<T>(el);
 
 			// Fyll ut med noen f� setninger
+			// Oppgåve 2 a)
 			nyNode.setNeste(p);
 			nyNode.setForrige(p.getForrige());
 			p.getForrige().setNeste(nyNode);
@@ -140,7 +141,7 @@ public class DobbelKjedetOrdnetListeM<T extends Comparable<T>> implements Dobbel
 	public T fjern(T el) {
 		T resultat = null;
 		DobbelNode<T> p = null;
-		boolean funnet = false;
+		//boolean funnet = false;
 
 		if ((el.compareTo(foerste.getElement()) <= 0) || (el.compareTo(siste.getElement()) >= 0)) {
 			// Ugyldig. Alternativt kan vi ha det som et forkrav!
@@ -159,17 +160,15 @@ public class DobbelKjedetOrdnetListeM<T extends Comparable<T>> implements Dobbel
 				p = p.getNeste();
 			} // while
 			*/
-			
-			p = finn(el); //tar den her då ein ikkje sjekkar etter ugyldige verdiar i finn(...) metoden
 
-			if (p != null && el.compareTo(p.getElement()) == 0) {
-				funnet = true;
-			}
+			// oppgåve 2 b)
+			p = finn(el); //tar den her då ein ikkje sjekkar etter ugyldige verdiar i finn(...) metoden
            
-			if (funnet) {
+			if (p != null) {
 				// Tar ut 
 				antall = antall - 1;
 				// Fyll ut med noen f� setninger.
+				// Oppgåve 2 a)
 				p.getForrige().setNeste(p.getNeste());
 				p.getNeste().setForrige(p.getForrige());
 

@@ -14,15 +14,11 @@ public class Oppgave_1 {
 
         System.out.println();
 
-        //main-program for b)
         
+        //main-program for b)
         for (int i = 0; i < 10; i++) {
             System.out.println(tallFolge(i));
         }
-    }
-
-    private static void a() {
-
     }
 
     // a)
