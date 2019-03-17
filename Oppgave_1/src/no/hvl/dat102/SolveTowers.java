@@ -15,7 +15,7 @@ public class SolveTowers
      */
     public static void main(String[] args) throws InterruptedException
     {
-        TowersOfHanoi towers = new TowersOfHanoi(64);
+        TowersOfHanoi towers = new TowersOfHanoi(16);
         Instant foer = Instant.now();
         towers.solve();
         Instant etter = Instant.now();
@@ -24,6 +24,7 @@ public class SolveTowers
 
         System.out.println("Før: " + foer + ", etter: " + etter + ".\nTid brukt: " + d);
 
+        /*
         Thread.sleep(10000);
 
         towers = new TowersOfHanoi(32);
@@ -38,5 +39,6 @@ public class SolveTowers
         System.out.println("(2^32 - 1) / (2^16 - 1) = " + (Math.pow(2, 32) - 1) / (Math.pow(2, 16) - 1) );
 
         System.out.println("Tid32 / Tid 16 = " + d.toMillis() / d2.toMillis());
+        */
     }
 }
