@@ -12,8 +12,8 @@ public class MaalingAvSortering {
     public static void main(String[] args) {
 
         Random tilfeldig = new Random();
-        int n = 128000;
-        int antal = 8;
+        int n = 256000;
+        int antal = 500;
 
         Integer[][] a = new Integer[antal][n];
         for (int i = 0; i < antal; i++) {
@@ -29,7 +29,8 @@ public class MaalingAvSortering {
             //fletteSort(a[i]);
             //bobleSort(a[i]);
             //sortUtval(a[i]);
-            sortInnsetting(a[i]);
+            //sortInnsetting(a[i]);
+            kvikkSortNy(a[i]);
         }
 
         Instant etter = Instant.now(); //tida etter sorteringa

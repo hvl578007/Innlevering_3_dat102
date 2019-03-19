@@ -192,4 +192,32 @@ public class Sortering {
         }
         
     }
+
+    public static <T extends Comparable<T>> void kvikkSortNy(T[] data) {
+        kvikkSort2(data, 0, data.length-1);
+        sorteringVedInnsetting2(data, 0, data.length-1);
+    }
+
+    public static final int MIN = 150;
+
+    public static <T extends Comparable<T>> void kvikkSort2(T[] data, int min, int maks) {
+        int posPartisjon;
+        if(maks - min + 1 > MIN) {
+            posPartisjon = finnPartisjon(data, min, maks);
+            kvikkSort(data, min, posPartisjon - 1);
+            kvikkSort(data, posPartisjon + 1, maks);
+        }
+    }
+
+    public static <T extends Comparable<T>> void sorteringVedInnsetting2(T[] data, int forste, int siste) {
+        for (int indeks = forste + 1; indeks <= siste; indeks++) {
+            T nokkel = data[indeks];
+            int p = indeks;
+            while (p > 0 && data[p-1].compareTo(nokkel) > 0) {
+                data[p] = data[p-1];
+                p--;
+            }
+            data[p] = nokkel;
+        }
+    }
 }
