@@ -5,17 +5,19 @@ import java.time.*;
 public class Oppgave_1 {
 
     public static void main(String[] args) {
-        Instant foerN = Instant.now();
-        System.out.println(sumN(10)); //tester a)
-        Instant etterN = Instant.now();
+    
+        //Instant foerN = Instant.now();
+        System.out.println("Summen av dei 100 første naturlege tal: " + sumN(100)); //tester a)
+        //Instant etterN = Instant.now();
 
-        Duration durN = Duration.between(foerN, etterN);
-        System.out.println("Tid brukt på summen av naturlege tal: " + durN);
+        //Duration durN = Duration.between(foerN, etterN);
+        //System.out.println("Tid brukt på summen av naturlege tal: " + durN);
 
         System.out.println();
 
         
         //main-program for b)
+        System.out.println("Dei 10 første ledda (startar med a0) i den gitte tallfølga:");
         for (int i = 0; i < 10; i++) {
             System.out.println(tallFolge(i));
         }

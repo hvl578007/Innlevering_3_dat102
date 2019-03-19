@@ -198,14 +198,14 @@ public class Sortering {
         sorteringVedInnsetting2(data, 0, data.length-1);
     }
 
-    public static final int MIN = 150;
+    public static final int MIN = 20;
 
     public static <T extends Comparable<T>> void kvikkSort2(T[] data, int min, int maks) {
         int posPartisjon;
         if(maks - min + 1 > MIN) {
             posPartisjon = finnPartisjon(data, min, maks);
-            kvikkSort(data, min, posPartisjon - 1);
-            kvikkSort(data, posPartisjon + 1, maks);
+            kvikkSort2(data, min, posPartisjon - 1);
+            kvikkSort2(data, posPartisjon + 1, maks);
         }
     }
 

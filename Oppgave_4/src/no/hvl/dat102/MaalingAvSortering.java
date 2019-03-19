@@ -12,8 +12,8 @@ public class MaalingAvSortering {
     public static void main(String[] args) {
 
         Random tilfeldig = new Random();
-        int n = 256000;
-        int antal = 500;
+        int n = 32000;
+        int antal = 3000;
 
         Integer[][] a = new Integer[antal][n];
         for (int i = 0; i < antal; i++) {

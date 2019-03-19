@@ -15,13 +15,15 @@ public class SolveTowers
      */
     public static void main(String[] args) throws InterruptedException
     {
-        TowersOfHanoi towers = new TowersOfHanoi(16);
+        int antal = 32;
+        TowersOfHanoi towers = new TowersOfHanoi(antal);
         Instant foer = Instant.now();
         towers.solve();
         Instant etter = Instant.now();
 
         Duration d = Duration.between(foer, etter);
 
+        System.out.println("Tal på diskar: " + antal);
         System.out.println("Før: " + foer + ", etter: " + etter + ".\nTid brukt: " + d);
 
         /*
